@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<style type="text/css">
+			.clearfix {
+				+zoom: 1
+			}
+			
+			.clearfix:after {
+				clear: both;
+				content: ".";
+				display: block;
+				font-size: 0;
+				line-height: 0;
+				visibility: hidden;
+				width: 0;
+				height: 0
+			}
+			
+			html, body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.wrap {
+				transform-origin: 0 0;
+				width: 1920px;
+				height: 100%;
+				transform: 0 0;
+			}
+			
+			.top {
+				background-image: url(img/bg.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			
+			.logo {
+				padding-top: 138px;
+				text-align: center;
+			}
+			
+			.content {
+				margin-top: 88px;
+				padding-bottom: 120px;
+			}
+			
+			.c-left {
+				width: 960px;
+				float: left;
+				text-align: right;
+				padding-top: 36px;
+			}
+			
+			.c-right {
+				float: left;
+				width: 500px;
+				height: 405px;
+				margin-left: 60px;
+				background-color: rgba(255, 255, 255, 0.3);
+				box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.29);
+			}
+			
+			.username {
+				margin-top: 70px;
+				margin-left: 39px;
+				width: 424px;
+				padding: 12px 0;
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+			
+			.password {
+				margin-top: 30px;
+				margin-left: 39px;
+				width: 424px;
+				padding: 12px 0;
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+			
+			.username img,
+			.password img {
+				margin-left: 15px;
+				margin-right: 10px;
+				width: 25px;
+				height: 24px;
+				vertical-align: middle;
+			}
+			
+			.username label,
+			.password label {
+				font-family: "微软雅黑";
+				font-size: 22px;
+				vertical-align: middle;
+				color: #313131;
+			}
+			
+			.username input,
+			.password input {
+				border: none;
+				outline: none;
+				font-size: 16px;
+				font-family: '宋体';
+				background-color: transparent;
+				vertical-align: middle;
+				width: 240px;
+			}
+			/* 自定义placeholder颜色 */
+			
+			::-moz-placeholder {
+				color: #7d7d7d;
+			}
+			
+			::-webkit-input-placeholder {
+				color: #7d7d7d;
+			}
+			
+			:-ms-input-placeholder {
+				color: #7d7d7d;
+			}
+			
+			.autologin {
+				margin-top: 30px;
+				margin-left: 39px;
+			}
+			
+			.autologin label {
+				font-family: "微软雅黑";
+			}
+			
+			.autologin label::before {
+				content: '';
+				width: 24px;
+				height: 24px;
+				margin-right: 10px;
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url(img/nocheck.png);
+				background-repeat: no-repeat;
+			}
+			
+			.autologin input {
+				display: none;
+			}
+			
+			.autologin input:checked+label::before {
+				content: '';
+				width: 24px;
+				height: 24px;
+				margin-right: 10px;
+				display: inline-block;
+				vertical-align: middle;
+				background-image: url(img/check.png);
+				background-repeat: no-repeat;
+			}
+			
+			.go {
+				margin-top: 30px;
+				margin-left: 39px;
+			}
+			
+			.go input {
+				border: none;
+				outline: none;
+				width: 424px;
+				padding: 14px 0;
+				background-color: #d14629;
+				font-size: 24px;
+				color: #fff;
+				box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.43);
+			}
+			
+			.register {
+				margin-top: 30px;
+				text-align: center;
+			}
+			
+			.register a {
+				text-decoration: none;
+				font-size: 18px;
+				font-family: "微软雅黑";
+				color: #333;
+			}
+			
+			.company {
+				padding: 100px 0 165px;
+				font-size: 14px;
+				font-family: "微软雅黑";
+				text-align: center;
+				color: #666;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="top">
+
+				<div class="logo">
+					<img src="img/logo.png" />
+				</div>
+
+				<div class="content clearfix">
+
+					<div class="c-left">
+						<img src="img/dn.png" />
+					</div>
+
+					<div class="c-right">
+
+						<div class="username">
+							<img src="img/user.png" alt="" />
+							<label for="username">账户 : </label>
+							<input id="username" type="text" placeholder="手机号/用户名/邮箱" />
+						</div>
+
+						<div class="password">
+							<img src="img/lock.png" alt="" />
+							<label for="password">密码 : </label>
+							<input id="password" type="text" placeholder="请输入密码" />
+						</div>
+
+						<div class="autologin">
+							<input type="checkbox" id="autologin" />
+							<label for="autologin">自动登录</label>
+						</div>
+
+						<div class="go">
+							<input type="button" value="登录" />
+						</div>
+
+						<div class="register">
+							<a href="###">新用户注册</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<div class="company">
+				Copyright©2013-2016 微信中国 All Rights Reserved
+			</div>
+		</div>
+		<script type="text/javascript">
+			//用于兼容ie9不支持placeholder
+			var funPlaceholder = function(element) {
+				//检测是否需要模拟placeholder
+				var placeholder = '';
+				if(element && !("placeholder" in document.createElement("input")) && (placeholder = element.getAttribute("placeholder"))) {
+					//当前文本控件是否有id, 没有则创建
+					var idLabel = element.id;
+					if(!idLabel) {
+						idLabel = "placeholder_" + new Date().getTime();
+						element.id = idLabel;
+					}
+
+					//创建label元素
+					var eleLabel = document.createElement("label");
+					eleLabel.htmlFor = idLabel;
+					eleLabel.style.position = "absolute";
+					//根据文本框实际尺寸修改这里的margin值
+					eleLabel.style.margin = "2px 0 0 3px";
+					eleLabel.style.color = "#7d7d7d";
+					eleLabel.style.cursor = "text";
+					eleLabel.style.fontFamily = "微软雅黑";
+					eleLabel.style.fontSize = '16px';
+					//插入创建的label元素节点
+					element.parentNode.insertBefore(eleLabel, element);
+					//事件
+					element.onfocus = function() {
+						eleLabel.innerHTML = "";
+					};
+					element.onblur = function() {
+						if(this.value === "") {
+							eleLabel.innerHTML = placeholder;
+						}
+					};
+
+					//样式初始化
+					if(element.value === "") {
+						eleLabel.innerHTML = placeholder;
+					}
+				}
+			};
+
+			funPlaceholder(document.getElementById("username"));
+			funPlaceholder(document.getElementById("password"));
+			
+			//动态设置页面的大小比例
+			var wrap = document.querySelector(".wrap");
+			function computeScale () {
+				var scale = document.body.clientWidth / 1920;
+				if (scale < 0.7) {
+					scale = 0.7;
+				}
+				wrap.style.transform = "scale(" + scale + ")";
+			}
+			computeScale();
+			window.onresize = computeScale;
+			
+		</script>
+	</body>
+
+</html>
